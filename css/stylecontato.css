@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #c4e4fd;
+}
+#formulario-contato {
+    display: flex;
+    flex-direction: column;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgb(247, 241, 223);
+  border: none;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+}
+
+#formulario-contato h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#formulario-contato label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#formulario-contato input, #formulario-contato select, #formulario-contato textarea {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  box-shadow: 1px 1px 6px #3013131c;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+#formulario-contato textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+#formulario-contato button[type="submit"], .botoes, #Cadastrar {
+  width: 30%;
+  height: 40px;
+  background-color: #025492;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+#formulario-contato button[type="submit"]:hover {
+  background-color: #6e9277;
+}
+
+.cancel-button button {
+    width: 30%;
+    margin-top: 1.0rem;
+    border: none;
+    background-color: #025492;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-button button:hover {
+    background-color: #6e9277;
+}
+
+.cancel-button button a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+#email:hover {
+    background-color: #f8f8f8;
+}
+#nome:hover {
+    background-color: #f8f8f8;
+}
+#tipo:hover {
+    background-color: #f8f8f8;
+}
+#descricao:hover {
+    background-color: #f8f8f8;
+}
+
+#email:focus-visible {
+    outline: 1px solid #025492;
+}
+#nome:focus-visible {
+    outline: 1px solid #025492;
+}
+#tipo:focus-visible {
+    outline: 1px solid #025492;
+}
+#descricao:focus-visible {
+    outline: 1px solid #025492;
+}
+
+#nomeP:hover {
+    background-color: #f8f8f8;
+}
+#qtde:hover {
+    background-color: #f8f8f8;
+}
+#valord:hover {
+    background-color: #f8f8f8;
+}
+#valort:hover {
+    background-color: #f8f8f8;
+}
+
+#nomeP:focus-visible {
+    outline: 1px solid #025492;
+}
+#qtde:focus-visible {
+    outline: 1px solid #025492;
+}
+#valord:focus-visible {
+    outline: 1px solid #025492;
+}
+#valort:focus-visible {
+    outline: 1px solid #025492;
+}
