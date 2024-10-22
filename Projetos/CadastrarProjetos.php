@@ -2,16 +2,11 @@
 <html>
     <body>
         <?php
-        $tipo = $_POST["tipo"];
-        $arquiteto_responsavel = $_POST["arquiteto_responsavel"];
-        $estilo_de_projeto = $_POST["estilo_de_projeto"];
-        $orcamento = $_POST["orcamento"];
-        $prazo_entrega = $_POST["prazo_entrega"];
-        $cliente = $_POST["cliente"];
+        $nome = $_POST["nome"];
         $descricao = $_POST["descricao"];
         $conn = mysqli_connect($servidor, $dbusuario, $dbsenha, $dbname);
         mysqli_select_db($conn, '$dbname');
-        $sql = "INSERT INTO tb_projetos(tipo,arquiteto_responsavel, estilo_de_projeto, orcamento, prazo_entrega, cliente, descricao) VALUES ('$tipo', '$arquiteto_responsavel', '$estilo_de_projeto','$orcamento', '$prazo_entrega','$cliente', '$descricao')";
+        $sql = "INSERT INTO tb_projetos(nome, descricao) VALUES ('$nome', '$descricao')";
         if (mysqli_query($conn, $sql)) {
             echo "<script>alert('Seus dados foram salvos !'); window.location = '../index.html';</script>";
         } else {

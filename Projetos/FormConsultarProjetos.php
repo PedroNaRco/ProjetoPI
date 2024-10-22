@@ -21,12 +21,7 @@
                    >
                     <tr class="title">
                         <td align="center"> <strong>ID</strong></td>	
-                        <td align="center"> <strong>Tipo</strong></td>		
-                        <td align="center"> <strong>Arquiteto</strong></td>
-                        <td align="center"> <strong>Estilo</strong></td>
-                        <td align="center"> <strong>Orçamento</strong></td>
-                        <td align="center"> <strong>Prazo de entrega</strong></td>
-                        <td align="center"> <strong>Cliente</strong></td>
+                        <td align="center"> <strong>Nome</strong></td>		
                         <td align="center"> <strong>Descrição</strong></td>
                         <td width="10"> <strong>Editar</strong></td>
                         <td width="10"> <strong>Deletar</strong></td>
@@ -38,12 +33,7 @@
                         while ($campo= mysqli_fetch_array($selecionar)){?>
                             <tr>
                                 <td align="center"><?=$campo["id_projetos"]?></td>
-                                <td align="center"><?=$campo["tipo"]?></td>
-                                <td align="center"><?=$campo["arquiteto_responsavel"]?></td>
-                                <td align="center"><?=$campo["estilo_de_projeto"]?></td>
-                                <td align="center"><?=$campo["orcamento"]?></td>
-                                <td align="center"><?=$campo["prazo_entrega"]?></td>
-                                <td align="center"><?=$campo["cliente"]?></td>
+                                <td align="center"><?=$campo["nome"]?></td>
                                 <td align="center"><?=$campo["descricao"]?></td>
                                 <td align="center"><a href="FormEditarProjetos.php?editarid=<?php echo $campo ['id_projetos'];?>">Editar</a></td>
                                 <td align="center"><i><a href="ExcluirProjetos.php?p=excluir&projetos=<?php echo $campo['id_projetos'];?>">Excluir</i></a></td>

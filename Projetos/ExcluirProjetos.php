@@ -2,7 +2,7 @@
 
 include("../conectarbd.php");
 
-$recid= filter_input(INPUT_GET, 'progetos');
+$recid= filter_input(INPUT_GET, 'projetos');
 
 
 

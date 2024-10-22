@@ -19,29 +19,8 @@
                 <div class="input-group">
                    
                     <div class="input-box" style="width: 100%">
-                        <label for="tipo">Tipo</label>
-                        <input id="tipo" type="text" name="tipo"  placeholder="Digite o tipo" required>
-                    </div>
-                    <div class="input-box" style="width: 100%">
-                        <label for="arquiteto_responsavel">Arquiteto responsável</label>
-                        <input id="arquiteto" type="text" name="arquiteto" placeholder="Digite o arquiteto" required>
-                    </div>
-                    <div class="input-box">
-                        <label for="estilo_de_projeto">Estilo de projeto</label>
-                        <input id="estilo_de_projeto" type="text" name="estilo_de_projeto" placeholder="Digite o estilo de projeto" required>
-                    </div>
-                    <div class="input-box" style="width: 100%" >
-                        <label for="orçamento" >Orçamento</label>
-                        <input id="orçamento" type="text" name="orçamento"  placeholder="Digite o orçamento" required>
-                    </div>
-                    
-                    <div class="input-box" style="width: 100%">
-                        <label for="prazo_entrega">Prazo de entrega</label>
-                        <input id="prazo_entrega" type="date" name="prazo_entrega">
-                    </div>
-                    <div class="input-box" style="width: 100%" >
-                        <label for="cliente" >Cliente</label>
-                        <input id="cliente" type="text" name="cliente"  placeholder="Digite o cliente" required>
+                        <label for="nome">Nome</label>
+                        <input id="nome" type="text" name="nome"  placeholder="Digite o nome" required>
                     </div>
                     
                     <div class="input-box" style="width: 100%">

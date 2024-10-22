@@ -23,7 +23,7 @@
         <input type="hidden" name="id" value="<?=$campo["id_projetos"]?>"> 
         
  <div class="form">
-            <form action="CadastrarProjetos.php" method="post">
+     <form action="EditarProjetos.php" method="post">
                 <div class="form-header">
                         <h1>Projeto</h1>
                     
@@ -33,30 +33,9 @@
                 <div class="input-group">
                    
                     <div class="input-box" style="width: 100%">
-                        <label for="tipo">Tipo</label>
-                        <input id="tipo" type="text" name="tipo"  placeholder="Digite o tipo" required value="<?=$campo["tipo"]?>">
-                    </div>
-                    <div class="input-box" style="width: 100%">
-                        <label for="arquiteto_responsavel">Arquiteto responsável</label>
-                        <input id="arquiteto_responsavel" type="text" name="arquiteto_responsavel" placeholder="Digite o arquiteto" required value="<?=$campo["arquiteto_responsavel"]?>">
-                    </div>
-                    <div class="input-box">
-                        <label for="estilo_de_projeto">Estilo de projeto</label>
-                        <input id="estilo_de_projeto" type="text" name="estilo_de_projeto" placeholder="Digite o estilo de projeto" required value="<?=$campo["estilo_de_projeto"]?>">
-                    </div>
-                    <div class="input-box" style="width: 100%" >
-                        <label for="orcamento" >Orçamento</label>
-                        <input id="orcamento" type="text" name="orcamento"  placeholder="Digite o orçamento" required value="<?=$campo["orcamento"]?>">
-                    </div>
-                    
-                    <div class="input-box" style="width: 100%">
-                        <label for="prazo_entrega">Prazo de entrega</label>
-                        <input id="prazo_entrega" type="text" name="prazo_entrega" required value="<?=$campo["prazo_entrega"]?>">
-                    </div>
-                    <div class="input-box" style="width: 100%" >
-                        <label for="cliente" >Cliente</label>
-                        <input id="cliente" type="text" name="cliente"  placeholder="Digite o cliente" required required value="<?=$campo["cliente"]?>">
-                    </div>
+                        <label for="nome">Nome</label>
+                        <input id="nome" type="text" name="nome" required value="<?=$campo["nome"]?>">
+                    </div>                 
                     
                     <div class="input-box" style="width: 100%">
                         <label for="descricao">Descrição</label>
@@ -65,7 +44,7 @@
 
 </div>
                 <div class="continue-button" >
-                    <button type="submit" style="color:#fff; font-size: 1rem;">Cadastrar</button>
+                    <button type="submit" style="color:#fff; font-size: 1rem;">Alterar</button>
                
                 <button type="button" style="color:#fff"> <a href="../index.html">Cancelar</a></button>
                 </div>
