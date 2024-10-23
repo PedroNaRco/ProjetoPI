@@ -40,10 +40,18 @@
 
             <li><a href="#">Projetos</a>
                 <ul>
-                    <li><a href="Projetos/FormCadastrarProjetos.php">Cadastrar</a></li>
-                    <li><a href="Projetos/FormConsultarProjetos.php">Consultar</a>
+                    <li><a href="Tipo_Projetos/FormCadastrarProjetos.php">Cadastrar</a></li>
+                    <li><a href="Tipo_Projetos/FormConsultarProjetos.php">Consultar</a>
                 </ul>
             </li>
+            
+            <li><a href="#">Tipo de Projeto</a>
+                <ul>
+                    <li><a href="Tipo_Projetos/FormCadastrarProjetos.php">Cadastrar</a></li>
+                    <li><a href="Tipo_Projetos/FormConsultarProjetos.php">Consultar</a>
+                </ul>
+            </li>
+            
             <li><a href="#">Agendamento</a>
                 <ul>
                     <li><a href="Agendamento/FormCadastrarAgendamento.php">Cadastrar</a></li>

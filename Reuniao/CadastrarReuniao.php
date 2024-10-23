@@ -2,15 +2,15 @@
 <html>
     <body>
         <?php
-        $nome_evento = $_POST["nome_evento"];
-        $dt_evento = $_POST["dt_evento"];
+        $nome = $_POST["nome"];
+        $data = $_POST["data"];
         $horario = $_POST["horario"];
         $cliente = $_POST["cliente"];
-        $arquiteto_resp = $_POST["arquiteto_resp"];
+        $arquiteto = $_POST["arquiteto"];
         $descricao = $_POST["descricao"];
         $conn = mysqli_connect($servidor, $dbusuario, $dbsenha, $dbname);
         mysqli_select_db($conn, '$dbname');
-        $sql = "INSERT INTO tb_reuniao(nome_evento, dt_evento, horario, cliente, arquiteto_resp, descricao) VALUES ('$nome_evento', '$dt_evento', '$horario','$cliente', '$arquiteto_resp', '$descricao')";
+        $sql = "INSERT INTO tb_reunioes(nome, data, horario, cliente, arquiteto, descricao) VALUES ('$nome', '$data', '$horario','$cliente', '$arquiteto', '$descricao')";
         if (mysqli_query($conn, $sql)) {
             echo "<script>alert('Seus dados foram salvos !'); window.location = '../index.html';</script>";
         } else {

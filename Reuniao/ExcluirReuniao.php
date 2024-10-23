@@ -2,11 +2,11 @@
 
 include("../conectarbd.php");
 
-$recid= filter_input(INPUT_GET, 'reuniao');
+$recid= filter_input(INPUT_GET, 'reunioes');
 
 
 
-  if(mysqli_query($conn, "DELETE FROM tb_reuniao WHERE id_reuniao=$recid")) {
+  if(mysqli_query($conn, "DELETE FROM tb_reunioes WHERE id_reunioes=$recid")) {
 
     echo "<script>alert('Dados excluidos com sucesso!'); window.location = 'FormConsultarReuniao.php';</script>";
 

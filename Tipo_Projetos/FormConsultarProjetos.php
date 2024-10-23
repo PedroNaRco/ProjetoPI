@@ -29,14 +29,14 @@
 
                     <?php
                         include("../conectarbd.php");
-                        $selecionar= mysqli_query($conn, "SELECT * FROM tb_projetos");
+                        $selecionar= mysqli_query($conn, "SELECT * FROM tb_tipo_projeto");
                         while ($campo= mysqli_fetch_array($selecionar)){?>
                             <tr>
-                                <td align="center"><?=$campo["id_projetos"]?></td>
+                                <td align="center"><?=$campo["id_tipo_projeto"]?></td>
                                 <td align="center"><?=$campo["nome"]?></td>
                                 <td align="center"><?=$campo["descricao"]?></td>
-                                <td align="center"><a href="FormEditarProjetos.php?editarid=<?php echo $campo ['id_projetos'];?>">Editar</a></td>
-                                <td align="center"><i><a href="ExcluirProjetos.php?p=excluir&projetos=<?php echo $campo['id_projetos'];?>">Excluir</i></a></td>
+                                <td align="center"><a href="FormEditarProjetos.php?editarid=<?php echo $campo ['id_tipo_projeto'];?>">Editar</a></td>
+                                <td align="center"><i><a href="ExcluirProjetos.php?p=excluir&projetos=<?php echo $campo['id_tipo_projeto'];?>">Excluir</i></a></td>
                             </tr>
                     <?php }?>
                 </table><br>
