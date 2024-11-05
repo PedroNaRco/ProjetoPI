@@ -10,7 +10,7 @@
 <body>
     <nav class="menu">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             
                 <li><a href="#">Clientes</a>
                 <ul>
@@ -62,6 +62,19 @@
                     <li><a href="Funcionario/FormConsultarFuncionario.php">Consultar</a>
                 </ul>
             </li>
+            <li><a href="login.html">Login</a></li>
         </ul>
+        <!-- Div onde o nome do usuário será exibido -->
+        
     </nav>
+    <div id="exibirnome">
+            <?php
+            // Exibe o nome do usuário, se estiver logado
+            if (isset($_SESSION['user_name'])) {
+                echo "Olá, " . htmlspecialchars($_SESSION['user_name']) . "!";
+            } else {
+                echo "Bem-vindo!";
+            }
+            ?>
+        </div>
 </body>
