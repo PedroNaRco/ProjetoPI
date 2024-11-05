@@ -22,12 +22,12 @@
                     <div class="input-group">
                         <div class="input-box">
                             <label>Nome Evento</label>
-                            <input id="nome_evento" type="text" name="nome_evento" placeholder="Digite um nome" required>
+                            <input id="nome_evento" type="text" name="nome" placeholder="Digite um nome" required>
                         </div>
 
                         <div class="input-box">
                             <label>Data do Evento</label>
-                            <input id="dt_evento" type="date" name="dt_evento" required>
+                            <input id="dt_evento" type="date" name="data" required>
                         </div>
                         <div class="input-box">
                             <label for="cpf">Horário</label>
@@ -41,7 +41,7 @@
 
                         <div class="input-box">
                             <label for="number">Arquiteto Responsável</label>
-                            <input id="arquiteto" type="text" name="arquiteto_resp" placeholder="Digite o Arquiteto Responsável" required>
+                            <input id="arquiteto" type="text" name="arquiteto" placeholder="Digite o Arquiteto Responsável" required>
                         </div>
 
                         <div class="input-box">

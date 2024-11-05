@@ -6,6 +6,8 @@
     <title>Formulario de Funcionarios</title>
     <link rel="stylesheet" href="../css/StyleFuncionario11.css">
     <script>
+        
+        // código abaixo e para consulta do CEP
         function buscarEndereco() {
             var cep = document.getElementById('cep').value.replace(/\D/g, ''); // Remove caracteres não numéricos
             if (cep.length === 8) {
@@ -40,11 +42,66 @@
             document.getElementById('cidade').value = '';
             document.getElementById('estado').value = '';
         }
+        // FIM do CEP
+        //Código abaixo válida o CPF
+        function validaCPF(cpf) {
+                        cpf = cpf.replace(/\D+/g, '');
+                        if (cpf.length !== 11)
+                            return false;
+
+                        let soma = 0;
+                        let resto;
+                        if (/^(\d)\1{10}$/.test(cpf))
+                            return false;
+
+                        for (let i = 1; i <= 9; i++)
+                            soma += parseInt(cpf.substring(i - 1, i)) * (11 - i);
+                        resto = (soma * 10) % 11;
+                        if ((resto === 10) || (resto === 11))
+                            resto = 0;
+                        if (resto !== parseInt(cpf.substring(9, 10)))
+                            return false;
+
+                        soma = 0;
+                        for (let i = 1; i <= 10; i++)
+                            soma += parseInt(cpf.substring(i - 1, i)) * (12 - i);
+                        resto = (soma * 10) % 11;
+                        if ((resto === 10) || (resto === 11))
+                            resto = 0;
+                        if (resto !== parseInt(cpf.substring(10, 11)))
+                            return false;
+
+                        //alert('CPF cadastrado.');
+                        return true;
+                    }
+
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('cpfForm').addEventListener('submit', function (e) {
+                            var cpf = document.getElementById('cpf').value;
+                            if (!validaCPF(cpf)) {
+                                e.preventDefault();
+                                alert('CPF inválido. Verifique o número digitado.');
+                                document.getElementById('cpf').focus();
+                            }
+                        });
+
+                        document.getElementById('cpf').addEventListener('input', function (e) {
+                            var value = e.target.value;
+                            var cpfPattern = value.replace(/\D/g, '')
+                                    .replace(/(\d{3})(\d)/, '$1.$2')
+                                    .replace(/(\d{3})(\d)/, '$1.$2')
+                                    .replace(/(\d{3})(\d)/, '$1-$2')
+                                    .replace(/(-\d{2})\d+?$/, '$1');
+                            e.target.value = cpfPattern;
+                        });
+                    });
+        
+        
     </script>
 </head>
 <body>
     <div class="form">
-        <form action="CadastrarFuncionario.php" method="post">
+        <form action="CadastrarFuncionario.php" method="post" id="cpfForm">
             <div class="form-header">
                 <div class="title">
                     <h1>Funcionarios</h1>
@@ -57,15 +114,15 @@
                     <input id="cliente" type="text" name="nome" placeholder="Nome" required>
                 </div>
                 <div class="input-box">
-                    <label for="data">Data_Nasc</label>
-                    <input id="data" type="date" name="data_nasc" placeholder="Nasc" required>
+                    <label for="data">Data Nascimento</label>
+                    <input id="data" type="date" name="data_nasc" placeholder="Nascimento" required>
                 </div>
                 <div class="input-box">
-                    <label for="horario">Genero</label>
-                    <input id="horario" type="text" name="genero" placeholder="Genero" required>
+                    <label for="horario">Gênero</label>
+                    <input id="horario" type="text" name="genero" placeholder="Gênero" required>
                 </div>
                 <div class="input-box">
-                    <label for="estado_civil">Estado_Civil</label>
+                    <label for="estado_civil">Estado Civil</label>
                     <input id="estado_civil" type="text" name="estado_civil" placeholder="Estado Civil" required>
                 </div>
                 <div class="input-box">
@@ -81,8 +138,8 @@
                     <input id="endereco" type="text" name="endereco" placeholder="Endereço" required>
                 </div>
                 <div class="input-box">
-                    <label for="n">N</label>
-                    <input id="n" type="text" name="n" placeholder="N" required>
+                    <label for="n">Nº</label>
+                    <input id="n" type="text" name="n" placeholder="Nº" required>
                 </div>
                 <div class="input-box">
                     <label for="complemento">Complemento</label>
@@ -101,24 +158,24 @@
                     <input id="estado" type="text" name="estado" placeholder="Estado" required>
                 </div>
                 <div class="input-box">
-                    <label for="tel_cel">Tel_cel</label>
-                    <input id="tel_cel" type="text" name="tel_cel" placeholder="Telefone/Celular" required>
+                    <label for="tel_cel">Celular</label>
+                    <input id="tel_cel" type="text" name="tel_cel" placeholder="Celular" required>
                 </div>
                 <div class="input-box">
                     <label for="email">Email</label>
-                    <input id="email" type="text" name="email" placeholder="Email" required>
+                    <input id="email" type="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="input-box">
-                    <label for="funcao">Funcao</label>
+                    <label for="funcao">Função</label>
                     <input id="funcao" type="text" name="funcao" placeholder="Função" required>
                 </div>
                 <div class="input-box">
-                    <label for="data_admissao">Data_Admissao</label>
-                    <input id="data_admissao" type="date" name="data_admissao" placeholder="Data Admissão" required>
+                    <label for="data_admissao">Data Admissao</label>
+                    <input id="data_admissao" type="date" name="data_admissao" placeholder="Data de Admissão" required>
                 </div>
                 <div class="input-box">
-                    <label for="salario">Salario</label>
-                    <input id="salario" type="text" name="salario" placeholder="Salario" required>
+                    <label for="salario">Salário</label>
+                    <input id="salario" type="text" name="salario" placeholder="Salário" required>
                 </div>
                 <div class="input-box">
                     <label for="turno">Turno</label>
@@ -133,7 +190,7 @@
                     <input id="rg" type="text" name="rg" placeholder="Rg" required>
                 </div>
                 <div class="input-box">
-                    <label for="orgao_emissor">Orgão_emissor</label>
+                    <label for="orgao_emissor">Orgão emissor</label>
                     <input id="orgao_emissor" type="text" name="orgao_emissor" placeholder="Orgão" required>
                 </div>
                 <div class="input-box">
@@ -141,7 +198,7 @@
                     <input id="uf" type="text" name="uf" placeholder="Uf" required>
                 </div>
                 <div class="input-box">
-                    <label for="data_expedicao">Data_expedição</label>
+                    <label for="data_expedicao">Data de Expedição</label>
                     <input id="data_expedicao" type="date" name="data_expedicao" placeholder="Data de Expedição" required>
                 </div>
                 <div class="input-box">
@@ -149,7 +206,7 @@
                     <input id="ctps" type="text" name="ctps" placeholder="Ctps" required>
                 </div>
                 <div class="input-box">
-                    <label for="data_emissao">Data_emissão</label>
+                    <label for="data_emissao">Data de Emissão</label>
                     <input id="data_emissao" type="date" name="data_emissao" placeholder="Data de Emissão" required>
                 </div>
                 <div class="input-box">
@@ -161,8 +218,8 @@
                     <input id="banco" type="text" name="banco" placeholder="Banco" required>
                 </div>
                 <div class="input-box">
-                    <label for="agencia">Agencia</label>
-                    <input id="agencia" type="text" name="agencia" placeholder="Agencia" required>
+                    <label for="agencia">Agência</label>
+                    <input id="agencia" type="text" name="agencia" placeholder="Agência" required>
                 </div>
                 <div class="input-box">
                     <label for="conta">Conta</label>

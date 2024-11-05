@@ -6,7 +6,7 @@ $recid= filter_input(INPUT_GET, 'projetos');
 
 
 
-  if(mysqli_query($conn, "DELETE FROM tb_projetos WHERE id_projetos=$recid")) {
+  if(mysqli_query($conn, "DELETE FROM tb_tipo_projeto WHERE id_tipo_projeto=$recid")) {
 
     echo "<script>alert('Dados excluidos com sucesso!'); window.location = 'FormConsultarProjetos.php';</script>";
 

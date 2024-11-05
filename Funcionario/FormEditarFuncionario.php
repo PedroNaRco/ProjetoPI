@@ -34,7 +34,7 @@
                     </div>
 
                     <div class="input-box">
-                        <label for="data_nasc">Data Nascimento</label>
+                        <label for="data_nasc">Data de Nascimento</label>
                         <input id="data_nasc" type="date" name="data_nasc" placeholder="Data de Nascimento" required value="<?= $campo["data_nasc"] ?>">
                     </div>
 
@@ -65,7 +65,7 @@
 
                     <div class="input-box">
                         <label for="n">Nº</label>
-                        <input id="n" type="text" name="n" placeholder="Número" required value="<?= $campo["n"] ?>">
+                        <input id="n" type="text" name="n" placeholder="Nº" required value="<?= $campo["n"] ?>">
                     </div>
 
                     <div class="input-box">
@@ -89,8 +89,8 @@
                     </div>
 
                     <div class="input-box">
-                        <label for="tel_cel">Telefone/Celular</label>
-                        <input id="tel_cel" type="text" name="tel_cel" placeholder="Telefone/Celular" required value="<?= $campo["tel_cel"] ?>">
+                        <label for="tel_cel">Celular</label>
+                        <input id="tel_cel" type="text" name="tel_cel" placeholder="Celular" required value="<?= $campo["tel_cel"] ?>">
                     </div>
 
                     <div class="input-box">
@@ -104,7 +104,7 @@
                     </div>
 
                     <div class="input-box">
-                        <label for="data_admissao">Data Admissão</label>
+                        <label for="data_admissao">Data de Admissão</label>
                         <input id="data_admissao" type="date" name="data_admissao" placeholder="Data de Admissão" required value="<?= $campo["data_admissao"] ?>">
                     </div>
 
@@ -139,7 +139,7 @@
                     </div>
 
                     <div class="input-box">
-                        <label for="data_expedicao">Data Expedição</label>
+                        <label for="data_expedicao">Data de Expedição</label>
                         <input id="data_expedicao" type="date" name="data_expedicao" placeholder="Data de Expedição" required value="<?= $campo["data_expedicao"] ?>">
                     </div>
 

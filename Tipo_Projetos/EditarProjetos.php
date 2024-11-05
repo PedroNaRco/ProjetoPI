@@ -9,7 +9,7 @@ $recnome= filter_input(INPUT_POST, 'nome');
 $recdescricao= filter_input(INPUT_POST, 'descricao');
 
 
-  if(mysqli_query($conn, "UPDATE tb_projetos SET projetos='$recnome', descricao='$recdescricao' WHERE id_projetos=$recid")) {
+  if(mysqli_query($conn, "UPDATE tb_tipo_projeto SET nome='$recnome', descricao='$recdescricao' WHERE id_tipo_projetos=$recid")) {
 
     echo "<script>alert('Dados alterado com sucesso!'); window.location = 'FormConsultarAgendamento.php';</script>";
 

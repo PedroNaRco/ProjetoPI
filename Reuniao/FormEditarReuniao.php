@@ -13,7 +13,7 @@
 
       $recid=filter_input(INPUT_GET, 'editarid');
 
-      $selecionar= mysqli_query($conn, "SELECT * FROM tb_reuniao WHERE id_reuniao=$recid");
+      $selecionar= mysqli_query($conn, "SELECT * FROM tb_reunioes WHERE id_reunioes=$recid");
 
       $campo= mysqli_fetch_array($selecionar);
 
@@ -34,16 +34,16 @@
                 </div>
 
                 <!esta linha cria um campo oculto para passar o id_cidade, pois senão ao clicar em Salvar o código não saberá onde salvar.-->
-        <input type="hidden" name="id" value="<?=$campo["id_reuniao"]?>"> 
+        <input type="hidden" name="id" value="<?=$campo["id_reunioes"]?>"> 
         
                 <div class="input-group">
                     <div class="input-box">
                         <label>Nome do Evento</label>
-                        <input id="nome_evento" type="text" name="nome_evento" required value="<?=$campo["nome_evento"]?>">
+                        <input id="nome_evento" type="text" name="nome" required value="<?=$campo["nome"]?>">
                     </div>
                     <div class="input-box">
                         <label>Data Evento</label>
-                        <input id="dt_evento" type="text" name="dt_evento" required value="<?=$campo["dt_evento"]?>">
+                        <input id="dt_evento" type="text" name="data" required value="<?=$campo["data"]?>">
                     </div>
                     <div class="input-box">
                         <label>Horário</label>
@@ -56,7 +56,7 @@
 
                     <div class="input-box">
                         <label>Arquiteto Responsável</label>
-                        <input id="arquiteto_resp" type="text" name="arquiteto_resp" required value="<?=$campo["arquiteto_resp"]?>">
+                        <input id="arquiteto_resp" type="text" name="arquiteto_resp" required value="<?=$campo["arquiteto"]?>">
                     </div>
 
                     <div class="input-box">
